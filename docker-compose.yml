@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend_files
+    build: ./backend
     ports:
       - "7860:7860"
     healthcheck:
@@ -9,7 +9,7 @@ services:
       timeout: 5s
       retries: 3
   frontend:
-    build: ./frontend_files
+    build: ./frontend
     ports:
       - "8501:8501"
     depends_on:
